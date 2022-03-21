@@ -1,0 +1,333 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400);
+
+span
+{
+    color: #181011;
+}
+
+.flex
+{
+    display: flex;
+}
+
+.frame
+{
+    width: 100%;
+    height: 100vh;
+	background-color: #Eff6f6;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.box
+{
+    width: 400px;
+    height: 400px;
+    background: #42A7A1;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chart
+{
+    width: 75%;
+    height: 62%;
+    background-color: #fff;
+    border-radius: 4px;
+    flex-direction: column;
+}
+
+/*========== HEADER ==========*/
+.header
+{
+    max-width: 100%;
+    height: 25%;
+    background-color: #ff9d4c;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+}
+
+.header p, .header h3
+{
+    position: absolute;
+}
+
+.header h3
+{
+    font-weight: 600;   
+    font-size: 1rem;
+    margin: 0;
+}
+
+.header p
+{
+    font-weight: 400;   
+    font-size: 0.78rem;
+    margin: 0;
+}
+
+.report
+{
+    top: 12px;
+    left: 15px;
+}
+
+.date
+{
+    top:30px;
+    left: 15px;
+}
+
+.revenue
+{
+    top: 12px;
+    right: 15px;
+}
+
+.cash
+{
+    top: 30px;
+    right: 15px;
+}
+
+/*========== INFO ==========*/
+
+.info
+{
+    position: relative;
+    height: 15%;
+    padding: 1.05rem 1rem 1.05rem 1rem;
+    justify-content: right;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+
+.info div
+{
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.purchases, .views
+{
+    width: 16px;
+    height: 4px;
+    border-radius: 8px;
+}
+
+.purchas, .view
+{
+    font-size: 0.65rem;
+}
+
+.purchases
+{
+    background-color: #2867e1;
+}
+
+.views
+{
+    background-color: #e12828;
+}
+
+/*========== CHART ==========*/
+
+.chart__line
+{
+    position: relative;
+    max-height: 100%;
+    padding: 0rem 1rem 0.5rem 1rem;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.line
+{
+    max-width: 100%;
+    height: 1.5px;
+    background-color: #e1e1e1;
+}
+
+.canvas
+{
+    max-width: 100%;
+    z-index: 1;
+}
+
+.pointes
+{
+    max-width: 100%;
+    position: absolute;
+}
+
+.point 
+{
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.point.point-red {
+    background: #e12828;
+}
+.point.point-blue {
+    background: #2867e1;
+}
+
+.point.point-red.point-1 
+{
+    left: 7px;
+    top: 28px;
+}
+.point.point-red.point-2 
+{
+    left: 48px;
+    top: 4px;
+}
+.point.point-red.point-3 
+{
+    left: 88px;
+    top: 15px;
+}
+.point.point-red.point-4 
+{
+    left: 128px;
+    top: 6px;
+}
+.point.point-red.point-5 
+{
+    left: 169px;
+    top: 30px;
+}
+.point.point-red.point-6 
+{
+    left: 209px;
+    top: 39px;
+}
+.point.point-red.point-7 
+{
+    left: 249px;
+    top: 11px;
+}
+
+.point.point-blue.point-1 
+{
+    left: 7px;
+    top: 59px;
+}
+.point.point-blue.point-2 
+{
+    left: 48px;
+    top: 48px;
+}
+.point.point-blue.point-3 
+{
+    left: 88px;
+    top: 63px;
+}
+.point.point-blue.point-4 
+{
+    left: 128px;
+    top: 53px;
+}
+.point.point-blue.point-5 
+{
+    left: 169px;
+    top: 59px;
+}
+.point.point-blue.point-6 
+{
+    left: 209px;
+    top: 72px;
+}
+.point.point-blue.point-7 
+{
+    left: 249px;
+    top: 62px;
+}
+
+.tooltip 
+{
+    border-radius: 3px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    position: absolute;
+    bottom: 13px;
+    left: 50%;
+    transform: translate(-50%, 10px);
+    padding: 8px 6px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+.line__chart {
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+  }
+
+.line__blue 
+{
+    stroke: #2867e1;
+}
+
+.line__red 
+{
+    stroke: #e12828;
+}
+
+/*========== DAYS ==========*/
+
+.days
+{
+    justify-content: space-between;
+    margin: 0.25rem 1rem 0 1rem;
+}
+
+.day
+{
+    
+    color: #676B63;
+    font-size: .65rem;
+}
+
+/*========== PSEUDO CLASS ==========*/
+.point.point-red > .tooltip,
+.point.point-red > .tooltip:after 
+{
+    background-color: #e12828;
+}
+.point.point-blue > .tooltip,
+.point.point-blue > .tooltip:after 
+{
+    background-color: #2867e1;
+}
+
+.tooltip::after 
+{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: calc(50% - 3px);
+    transform: rotate(45deg);
+    width: 6px;
+    height: 6px;
+}
+
+.point:hover > .tooltip
+{
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(-50%, 0, 0);
+}
+

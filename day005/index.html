@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="frame">
+        <div class="box">
+            <div class="chart flex">
+                <div class="header">
+                    <h3 class="report">WEEKLY REPORT</h3>
+                    <p class="date">01. FEB - 07. FEB</p>
+                    <p class="revenue">Revenue</p>
+                    <h3 class="cash">$3621.79</h3>
+                </div>
+
+                <div class="chart__info">
+                    <div class="info flex">
+                        <div class="flex">
+                            <div class="views"></div>
+                            <span class="view">Views</span>
+                        </div>
+
+                        <div class="flex">
+                            <div class="purchases"></div>
+                            <span class="purchas">Purchases</span>
+                        </div>
+                    </div>
+
+                    <div class="chart__line flex">
+                        <div class="line line__1"></div>
+                        <div class="line line__2"></div>
+                        <div class="line line__3"></div>
+
+                        <div class="pointes">
+                            <svg class="canvas">
+                                <polyline
+                                  class="line__chart line__red"
+                                  points="9,31 51,7 90,18 131,8 169,32 212,42 253,14"
+                                ></polyline>
+                                <polyline
+                                  class="line__chart line__blue"
+                                  points="9,61 51,50 90,66 130,56 171,61 212,75 251,64"
+                                ></polyline>
+                            </svg>
+                            <!-- RED -->
+                            <div class="point point-red point-1">
+                                <div class="tooltip">458</div>
+                            </div>
+                            <div class="point point-red point-2">
+                                <div class="tooltip">812</div>
+                            </div>
+                            <div class="point point-red point-3">
+                                <div class="tooltip">746</div>
+                            </div>
+                            <div class="point point-red point-4">
+                                <div class="tooltip">877</div>
+                            </div>
+                            <div class="point point-red point-5">
+                                <div class="tooltip">517</div>
+                            </div>
+                            <div class="point point-red point-6">
+                                <div class="tooltip">434</div>
+                            </div>
+                            <div class="point point-red point-7">
+                                <div class="tooltip">458</div>
+                            </div>
+
+                            <!-- BLUE -->
+                            <div class="point point-blue point-1">
+                                <div class="tooltip">26</div>
+                            </div>
+                            <div class="point point-blue point-2">
+                                <div class="tooltip">41</div>
+                            </div>
+                            <div class="point point-blue point-3">
+                                <div class="tooltip">22</div>
+                            </div>
+                            <div class="point point-blue point-4">
+                                <div class="tooltip">36</div>
+                            </div>
+                            <div class="point point-blue point-5">
+                                <div class="tooltip">25</div>
+                            </div>
+                            <div class="point point-blue point-6">
+                                <div class="tooltip">13</div>
+                            </div>
+                            <div class="point point-blue point-7">
+                                <div class="tooltip">20</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="days flex">
+                        <span class="day">MON</span>
+                        <span class="day">TUE</span>
+                        <span class="day">WN</span>
+                        <span class="day">THU</span>
+                        <span class="day">FRI</span>
+                        <span class="day">SAT</span>
+                        <span class="day">SUN</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
