@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: 'Lato', sans-serif;
+}
+
+.flex
+{
+    display: flex;
+}
+
+.grid
+{
+    display: grid;
+}
+
+.frame
+{
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaf6f6;
+}
+
+.box
+{
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(140deg, #212121 10%, #424242 80%);
+    border-radius: 8px;
+    box-shadow: 6px 8px 16px rgba(0,0,0, 0.3);
+    color: #383033;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile
+{
+    width: 80%;
+    height: 75%;
+    background-color: #fff;
+    grid-template-columns: 1.5fr 1fr;
+}
+
+.content
+{
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.profile__image
+{
+    width: 88px;
+    height: 88px;
+    margin-top: 0.5rem;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.image
+{
+    width: 90%;
+    height: 90%;
+    background: url('https://lamenteemeravigliosa.it/wp-content/uploads/2017/11/donna-pensierosa.jpg') center;
+    background-size: cover;
+    border-radius: 50%;
+    
+}
+.circle__1,
+.circle__2
+{
+    border: solid 1px;
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 1.5s ease-in-out;
+}
+
+.circle__1
+{
+    width: 94%;
+    height: 94%;
+    border-color: #212121 #212121 #212121 transparent;
+}
+
+.circle__2
+{
+    width: 100%;
+    height: 100%;
+    border-color: #212121 transparent #212121 #212121 ;
+}
+
+.name
+{
+    font-size: 1rem;
+    margin-top: -0.25rem;
+}
+
+.job
+{
+    font-size: .75rem;
+    font-weight: 300;
+    margin-top: .25rem;
+}
+
+.button
+{
+    width: 120px;
+    margin: 8px 0 4px 0;
+    border: #212121 solid 2px;
+    border-radius: 25px;
+    font-size: .75rem;
+    font-weight: 700;
+    padding: 8px 0;
+    transition: background-color 0.5s;
+}
+
+/*========== INFO ==========*/
+.account
+{
+    width: 100%;
+    grid-template-columns: repeat(1fr);
+    row-gap: 0.15rem;
+}
+
+.account__info
+{
+    background-color: #e1e1e1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.account__text
+{
+    font-size: 1.25rem;
+}
+
+p
+{
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+/* PSEUDO */
+.profile__image:hover .circle__1
+{
+    transform: rotate(360deg);
+}
+.profile__image:hover .circle__2
+{
+    transform: rotate(-360deg);
+}
+
+.button:hover
+{
+    background-color: #212121;
+    color: #fff;
+}
+
+.account__info:hover
+{
+   
+    transition: background .5s;
+     background-color: #e1a1a1;
+}
