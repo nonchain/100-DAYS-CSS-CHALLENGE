@@ -1,0 +1,144 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.flex
+{
+    display: flex;
+}
+
+.frame
+{
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    filter: contrast(5);
+}
+
+.box
+{
+    width: 400px;
+    height: 400px;
+    background-color: #111;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.ball
+{
+    width: 90px;
+    height: 90px;
+    background-color: #fff;
+    border-radius: 50%;
+    filter: blur(3px);
+}
+
+.c-a, .c-m, .c-s, .c-es
+{
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    filter: blur(3px);
+    animation: rotate 3s infinite linear;
+}
+
+.c-a
+{
+    width: 50px;
+    height: 50px;
+}
+
+.c-m
+{
+    width: 20px;
+    height: 20px;
+}
+
+.c-s
+{
+    width: 12px;
+    height: 12px;
+}
+
+.c-es
+{
+    width: 8px;
+    height: 8px;
+}
+
+/*========== CHILD ==========*/
+.c-a:nth-child(2)
+{
+    transform-origin: 45px 35px;
+}
+
+.c-a:nth-child(3)
+{
+    transform-origin: 35px 45px;
+}
+
+.c-m:nth-child(4)
+{
+    transform-origin: -35px 45px;
+}
+
+.c-m:nth-child(5)
+{
+    top: 170px;
+    left: 200px;
+    transform-origin: 20px -30px;
+}
+
+ .c-m:nth-child(6)
+{
+    top: 205px;
+    left: 220px;
+    transform-origin: 20px 35px;
+        : rotate 2.5s infinite reverse linear;
+} 
+
+.c-s:nth-child(7)
+{
+    left: 300px;
+    transform-origin: -35px 45px;
+}
+
+.c-s:nth-child(8)
+{
+    top: 120px;
+    left: 150px;
+    transform-origin: 25px 25px;
+    animation: rotate 2.5s infinite reverse linear;
+}
+
+.c-es:nth-child(9)
+{
+    left: 220px;
+    top: 200px;
+    transform-origin: 45px 45px;
+    animation: rotate 2.5s infinite reverse linear;
+}
+
+.c-es:nth-child(10)
+{
+    left: 50px;
+    transform-origin: 60px 65px;
+}
+
+/*========== ANIMATION ==========*/
+@keyframes rotate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
