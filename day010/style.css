@@ -1,0 +1,154 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: sans-serif;
+}
+
+.flex
+{
+    display: flex;
+}
+
+.frame
+{
+    height: 100vh;
+    background-color: #eaf6f6;
+    justify-content: center;
+    align-items: center;
+}
+
+.box
+{
+    width: 400px;
+    height: 400px;
+    background-color: #3f3f3f;
+    border-radius: 8px;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+.watch
+{
+    width: 226px;
+    height: 226px;
+    background-color:#1f1f1f;
+    border-radius: 50%;
+    border: 8px solid #313033;
+    color:#fff;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.screen
+{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    z-index: 2;
+}
+
+svg
+{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    position: absolute;
+}
+
+.spinner
+{
+    stroke: #df2222;
+    stroke-width: 3px;
+    stroke-dasharray: 660;
+    stroke-dashoffset: 0;
+    transform-origin: center center;
+    transform: rotate(-90deg);
+    animation: spinner 5s infinite linear;
+}
+
+.dotted
+{
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-dasharray: 2 10;
+}
+
+span
+{
+    font-size: 0.85rem;
+}
+
+.time
+{
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.icon
+{
+    margin-right: 0.5rem;
+    color: #fd2020;
+    font-size: 1rem;
+    animation: heart 1.5s infinite;
+}
+
+.icon+span
+{
+    margin-right: 1rem
+}
+
+/*========== ANIMATION ==========*/
+@keyframes heart {
+    0%
+    {
+        transform: scale(1.1);
+    }
+    15%
+    {
+        transform: scale(0.75);
+    }
+    25%
+    {
+        transform: scale(1.1);
+    }
+    35%
+    {
+        transform: scale(0.75);
+    }
+    75%
+    {
+        transform: scale(1.1);
+    }
+    
+    100%
+    {
+        transform: scale(1.1);
+    }
+}
+@keyframes spinner
+{
+    0% {
+        stroke-dashoffset: 660;
+        transform: rotate(-90deg) scaleY(1);
+    }
+    50% {
+        stroke-dashoffset: 0;
+        transform: rotate(-90deg) scaleY(1);
+    }
+    50.001% {
+        stroke-dashoffset: 0;
+        transform: rotate(-90deg) scaleY(-1);
+    }
+    to {
+        stroke-dashoffset: 660;
+        transform: rotate(-90deg) scaleY(-1);
+    }
+}
