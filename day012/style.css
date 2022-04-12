@@ -1,0 +1,127 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: sans-serif;
+}
+
+.flex
+{
+    display: flex;
+}
+
+.frame
+{
+    height: 100vh;
+    background-color: #eaf6f6;
+    justify-content: center;
+    align-items: center;
+}
+
+.box
+{
+    padding-top: 1rem;
+    width: 400px;
+    height: 400px;
+    background-color: #8398eb;
+    border-radius: 8px;
+    color: #fff;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle
+{
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0.3;
+    top: 2.5rem;
+    left: 1.25rem;
+}
+
+.text
+{
+    margin: 0 2.25rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.word
+{
+    background-color: #286F8A;
+    display: inline;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.tooltips
+{
+    width: 75%;
+    background-color:#286F8A;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: -24px;
+    transition: all .5s ease-in-out;
+}
+
+.tooltips::after
+{
+    width: 20px;
+    height: 20px;
+    background-color: #286F8A;
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 132;
+    transform: rotate(45deg) translate(-50%, 0);
+}
+
+.tooltips > span
+{
+    font-size: 1rem;
+}
+
+.header
+{
+    padding: 0.5rem 1.25rem;
+    background-color: #fff;
+    color: #2867e1;
+}
+
+.body
+{
+    padding: 1rem 0.75rem;
+    line-height: 1.5;
+}
+
+.author
+{
+    width: 100%;
+    font-size: 1.25rem;
+    font-weight: 300;
+    position: relative;
+    left: 2.25rem;
+    top: 1.5rem;
+}
+
+
+/*========== HOVER ==========*/
+.word:hover + .tooltips 
+{
+    opacity: 1;
+    visibility: visible;
+    top: 16px;
+}
