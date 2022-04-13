@@ -4,4 +4,4 @@
 Using HTML and CSS and a few JavaScript
 
 
-## [Demo page](https://mrmoein.github.io/100-DAYS-CSS-CHALLENGE/)
+## [See Projects Live](https://progali007.github.io/100-DAYS-CSS-CHALLENGE/)
