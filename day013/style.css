@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *
 {
   margin: 0;
@@ -101,4 +102,109 @@ body
     opacity: 1;
     transform: scale(1) rotate(180deg);
     box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+=======
+*
+{
+  margin: 0;
+  padding: 0;
+}
+
+body
+{
+  font-family: sans-serif;
+}
+
+.flex
+{
+  display: flex;
+}
+
+.grid
+{
+    display: grid;
+}
+
+.frame
+{
+  height: 100vh;
+  background-color: #eaf6f6;
+  justify-content: center;
+  align-items: center;
+}
+
+.box
+{
+  width: 400px;
+  height: 400px;
+  background-color: #fefefe;
+  border-radius: 8px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.25rem;
+}
+
+.box > div.image
+{
+    width: 100%;
+    background-size: cover;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1);
+    transition: transform 0.6s;
+}
+
+.image:nth-child(1)
+{
+    background: no-repeat center url('https://minevisam.com/wp-content/uploads/2019/07/wallpaper-tiger-12.jpg');
+}
+
+.image:nth-child(2)
+{
+    background: no-repeat center url('https://cdn.mashreghnews.ir/d/2020/02/16/4/2718373.jpg');
+}
+
+.image:nth-child(3)
+{
+    background: no-repeat center url('https://media.wired.com/photos/598e35fb99d76447c4eb1f28/1:1/w_722,h_722,c_limit/phonepicutres-TA.jpg');
+}
+
+.image:nth-child(4)
+{
+    background: no-repeat center url('https://lh3.googleusercontent.com/5ne2tMQtTqzwVhb2vxh7ydl9eUeZzLhmf_rDJZX55miGwdBEqk9rCKhPeNZHUhijt-fzrr2zFIVY4gNkHElh');
+}
+
+.add
+{
+    width: 58px;
+    height: 58px;
+    background-color: #df2020;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: scale(2.5) rotate(0deg);
+    transition: 0.5s;
+}
+
+.add__icon
+{
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+/* ========== HOVER ========== */
+.box > div.image:hover
+{
+    box-shadow: inset 0 0 150px rgba(0,0,0,0.9);
+    border-radius: 2px;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.image:hover .add
+{
+    opacity: 1;
+    transform: scale(1) rotate(180deg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+>>>>>>> 0efff1266feeb01167b623a4e51468cd5bbaa266
 }
