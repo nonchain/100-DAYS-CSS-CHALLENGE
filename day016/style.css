@@ -1,0 +1,300 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: sans-serif;
+}
+
+.flex
+{
+    display: flex;
+}
+
+.frame
+{
+    height: 100vh;
+    background-color: #eaf6f6;
+    justify-content: center;
+    align-items: center;
+}
+
+.box
+{
+    width: 400px;
+    height: 400px;
+    background-color: #2867e1;
+    border-radius: 8px;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/*===== SHAPES =====*/
+
+.circle, .octagon, .triangle
+{
+    fill: #fff;
+    position: absolute;
+}
+
+.octagon
+{
+    width: 100px;
+	height: 100px;
+    top: 150px;
+	left: 150px;
+    animation: octa 5s ease-in-out infinite;
+}
+
+.triangle
+{
+    width: 106px;
+	height: 90px;
+    top: 145px;
+	left: 147px;
+    animation: triangle 5s ease-in-out infinite;
+}
+
+.circle
+{
+    width: 92px;
+    height: 92px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: blobby 5s ease-in-out infinite;
+}
+/*===== LINES =====*/
+.octa__lines, .tri__lines
+{
+    width: 200px;
+	height: 200px;
+    justify-items: center;
+    align-items: center;
+    opacity: 1;
+    position: absolute;
+}
+
+.line
+{
+    width: 100%;
+    height: 4px;
+    background-color: transparent;
+    border-radius: 4px;
+    position: absolute;
+}
+
+/* CIRCLE */
+.circle__rounded
+{
+    width: 110px;
+    height: 110px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+    animation: blobby-ring 5s ease-in-out infinite;
+}
+
+/* OCTAGON */
+.octa__lines
+{
+    animation: octa-sparkle 5s ease-in-out infinite;
+}
+
+.octa__line::after, .octa__line::before, .tri__line::after
+{
+    width: 25px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 4px;
+    content: '';
+    position: absolute;
+}
+
+.octa__line::before
+{
+    right: -32px;
+}
+
+.octa__line::after
+{
+    left: -32px;
+}
+
+.octa__line:nth-child(1)
+{
+    transform: rotate(22deg);
+}
+
+.octa__line:nth-child(2)
+{
+    transform: rotate(-22deg);
+}
+
+.octa__line:nth-child(3)
+{
+    transform: rotate(67deg);
+}
+
+.octa__line:nth-child(4)
+{
+    transform: rotate(-67deg);
+}
+
+ /* TRIANGLE */
+ .tri__lines
+{
+    animation: triangle-sparkle 5s ease-in-out infinite;
+}
+
+.tri__line::after
+{
+    left: -38px;
+}
+
+ .tri__line:nth-child(1)
+{
+    transform: rotate(90deg);
+}
+
+.tri__line:nth-child(2)
+{
+    transform: rotate(-146deg);
+}
+
+.tri__line:nth-child(3)
+{
+    transform: rotate(-34deg);
+}
+
+/*========== ANIMATION ==========*/
+@keyframes blobby
+{
+    0% {
+		transform: translate3d(0,-300px,0) scaleY(1.2);
+	}
+	10% {
+		transform: translate3d(0,50px,0) scaleY(0.8);
+	}
+	14% {
+		transform: translate3d(0,-30px,0) scaleY(1.1);
+	}
+	18% {
+		transform: translate3d(0,10px,0) scaleY(0.9);
+	}
+	20%, 22% {
+		transform: translate3d(0,0,0) scaleY(1);
+	}
+	26% {
+		transform: translate3d(0,0,0) scale(1.2);
+	}
+	32%,74% {
+		transform: translate3d(0,0,0) scale(0);
+	}
+	80% {
+		transform: translate3d(0,0,0) scale(1.2);
+	}
+	84% {
+		transform: translate3d(0,0,0) scale(0.9);
+	}
+	86%, 88% {
+		transform: translate3d(0,0,0) scale(1);
+	}
+	92% {
+		transform: translate3d(0,-30px,0) scaleY(0.9);
+	}
+	100% {
+		transform: translate3d(0,300px,0) scaleY(1.2);
+	}
+}
+
+@keyframes blobby-ring {
+	0%, 74% {
+		transform: translate3d(0,0,0) scale(0);
+		opacity: 1;
+	}
+	80% {
+		opacity: 1;
+	}
+	84%, 100% {
+		transform: translate3d(0,0,0) scale(1.4);
+		opacity: 0;
+	}
+}
+
+@keyframes octa {
+	0%, 30% {
+		transform: translate3d(0,0,0) scale(0);
+	}
+	36% {
+		transform: translate3d(0,0,0) scale(1.2);
+	}
+	40% {
+		transform: translate3d(0,0,0) scale(0.9);
+	}
+	42%, 44% {
+		transform: translate3d(0,0,0) scale(1);
+	}
+	48% {
+		transform: translate3d(0,0,0) scale(1.2);
+	}
+	54%, 100% {
+		transform: translate3d(0,0,0) scale(0);
+	}
+}
+
+@keyframes octa-sparkle {
+	0%, 30% {
+		transform: translate3d(0,0,0) scale(0);
+		opacity: 1;
+	}
+	36% {
+		opacity: 1;
+	}
+	40%, 100% {
+		transform: translate3d(0,0,0) scale(1.4);
+		opacity: 0;
+	}
+}
+
+@keyframes triangle {
+	0%, 52% {
+		transform: translate3d(0,0,0) scale(0);
+	}
+	58% {
+		transform: translate3d(0,0,0) scale(1.2);
+	}
+	62% {
+		transform: translate3d(0,0,0) scale(0.9);
+	}
+	64%, 66% {
+		transform: translate3d(0,0,0) scale(1);
+	}
+	70% {
+		transform: translate3d(0,0,0) scale(1.2);
+	}
+	76%, 100% {
+		transform: translate3d(0,0,0) scale(0);
+	}
+
+}
+
+@keyframes triangle-sparkle {
+	0%, 52% {
+		transform: scale(0);
+		opacity: 1;
+	}
+	58% {
+		opacity: 1;
+	}
+	62%, 100% {
+		transform: scale(1.4);
+		opacity: 0;
+	}
+}
