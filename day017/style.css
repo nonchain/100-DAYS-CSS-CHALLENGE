@@ -1,0 +1,87 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: sans-serif;
+}
+
+.flex
+{
+    display: flex;
+}
+
+.frame
+{
+    height: 100vh;
+    background-color: #eaf6f6;
+    justify-content: center;
+    align-items: center;
+}
+
+.box
+{
+    width: 400px;
+    height: 400px;
+    background: no-repeat center url('https://i.fbcd.co/products/resized/resized-750-500/d5034088fb75f386cfa5e67895d2ccc3c9a0360ba26f91100baf0f8ca5ea4e19.jpg');
+    border-radius: 8px;
+    box-shadow: 0 0 10px inset rgba(0, 0, 0, 1);
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.area
+{
+    width: 260px;
+	height: 260px;
+    background-color: #323232;
+    border-radius: 4px;
+    position: absolute;
+    box-shadow: 0 0 10px inset rgba(0, 0, 0, 1);
+}
+
+.polygon 
+{
+	position: absolute;
+	width: 160px;
+	height: 140px;
+	top: 55px;
+	left: 50px;
+}
+
+.light 
+{
+    fill: #e1e1e1;
+    transition: all .5s ease-in-out;
+}
+.middle 
+{
+    fill: #c4c4c4;
+    transition: all .5s ease-in-out;
+}
+.dark 
+{
+    fill: #989a9b;
+    transition: all .5s ease-in-out;
+}
+
+/*========== HOVER ==========*/
+.polygon:hover .light
+{
+    fill: #989b9a;
+}
+.polygon:hover .middle
+{
+    fill: #e1e1e1;
+}
+.polygon:hover .dark
+{
+    fill: #c4c4c4;
+}
+ 
