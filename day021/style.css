@@ -1,0 +1,119 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: 'Open Sans',sans-serif;
+}
+
+.flex
+{
+    display: flex;
+}
+
+.frame
+{
+    height: 100vh;
+    background-color: #eaf6f6;
+    justify-content: center;
+    align-items: center;
+}
+
+.box
+{
+    width: 400px;
+    height: 400px;
+    background-color: #222;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.circle
+{
+    width: 102px;
+    height: 102px;
+    background-color: #F4D146;
+    border-radius: 50%;
+}
+
+.eye
+{
+    width: 12px;
+    height: 12px;
+    background-color: #222;
+    border-radius: 50%;
+    position: absolute;
+    top: 164px;
+    left: 50%;
+    animation: eye 0.8s infinite;
+}
+
+.mouth
+{
+    width: 56px;
+    height: 100px;
+    background-color: #222;
+    clip-path: polygon(0 50%, 100% 100%, 100% 0);
+    position: absolute;
+    left: 50%;
+    animation: mouth .8s infinite;
+}
+
+.dots
+{
+    width: 240px;
+    stroke: #F4D146;
+	stroke-width: 14px;
+	stroke-dasharray: 0px 50px;
+	stroke-linecap: round;
+	animation: points .8s linear infinite;
+	stroke-dashoffset: 16;
+    position: absolute;
+    left: 50%;
+    top: 194px;
+}
+
+/*========== ANIMATION ==========*/
+@keyframes mouth
+{
+    0%, 100%
+    {
+        clip-path: polygon(0 50%, 100% 100%, 100% 0);
+    }
+
+    50%
+    {
+        clip-path: polygon(0 50%, 100% 50%, 100% 50%);
+    }
+}
+
+@keyframes eye
+{
+    0%, 100%
+    {
+        top: 164px;
+        left: 50%;
+    }
+
+    50%
+    {
+        top: 168px;
+        left: 52%;
+    }
+}
+
+@keyframes points {
+	0% {
+		stroke-dashoffset: 14;
+		transform: translate3d(0,0,0);
+	}
+	100% {
+		stroke-dashoffset: 64;
+	}
+}
