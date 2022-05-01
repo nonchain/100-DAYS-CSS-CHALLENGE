@@ -1,0 +1,208 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: 'Open Sans',sans-serif;
+}
+
+.flex
+{
+    display: flex;
+}
+
+.frame
+{
+    height: 100vh;
+    background-color: #eaf6f6;
+    justify-content: center;
+    align-items: center;
+}
+
+.box
+{
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(to bottom, #28404E 0%, #1c2e38 100%); 
+    border-radius: 8px;
+    color: #fefefe;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+/*===== TXT =====*/
+.title
+{
+    margin-top: 1.5rem;
+}
+
+.txt
+{
+    position: absolute;
+    font-weight: 500;
+}
+
+.kal__title, .kal__subtitle
+{
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.kal__title
+{
+    font-size: 1.5rem;
+    top: 135px;
+}
+
+.kal__subtitle
+{
+    top: 165px;
+}
+
+.step__title, .step__subtitle
+{
+    left: 30%;
+    transform: translateX(-50%);
+}
+
+.step__title
+{
+    font-size: 1.25rem;
+    bottom: 90px;
+}
+
+.step__subtitle
+{
+    font-size: .85rem;
+    bottom: 75px;
+}
+
+.km__title, .km__subtitle
+{
+    left: 71%;
+    transform: translateX(-50%);
+}
+
+.km__title
+{
+    font-size: 1.25rem;
+    bottom: 90px;
+}
+
+.km__subtitle
+{
+    font-size: .85rem;
+    bottom: 75px;
+}
+
+/*===== PROGRESS =====*/
+svg
+{
+    width: 150px;
+    position: absolute;
+}
+
+.progress
+{
+    fill: none;
+    stroke: #e1e1e1;
+    stroke-width: 12px;
+    stroke-linecap: round;
+    stroke-dashoffset: 0;
+    transform-origin: 50% 50.5%;
+}
+
+.kal
+{
+    stroke-dasharray: 114;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-90deg);
+}
+
+.step, .km
+{
+    stroke-dasharray: 88;
+    top: 230px;
+    transform: rotate(-90deg);
+}
+
+.step
+{
+    left: 42px;
+}
+
+.km
+{
+    right: 42px;
+}
+
+/*===== FILL =====*/
+.fill
+{
+    stroke-width: 12px;
+    stroke-dasharray: 400;
+    transform: rotate(-120deg);
+}
+
+.kal .progress.fill
+{
+    stroke: #28e167;
+    stroke-dashoffset: 220;
+    animation: kal 1.5s ease-out;
+}
+
+.step .progress.fill
+{
+    stroke: #2867e1;
+    stroke-dashoffset: 270;
+    animation: step 2s ease-out;
+}
+
+.km .progress.fill
+{
+    stroke: #e1e128;
+    stroke-dashoffset: 320;
+    animation: km 2.5s ease-out;
+}
+
+/*========== ANIMATION ==========*/
+@keyframes kal
+{
+    from
+    {
+        stroke-dashoffset: 400;
+    }
+    to
+    {
+        stroke-dashoffset: 220;
+    }
+}
+
+@keyframes step
+{
+    from
+    {
+        stroke-dashoffset: 400;
+    }
+    to
+    {
+        stroke-dashoffset: 270;
+    }
+}
+
+@keyframes km
+{
+    from
+    {
+        stroke-dashoffset: 400;
+    }
+    to
+    {
+        stroke-dashoffset: 320;
+    }
+}
