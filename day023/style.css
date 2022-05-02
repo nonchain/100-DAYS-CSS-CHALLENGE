@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;700;800;900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.flex
+{
+    display: flex;
+}
+
+.frame
+{
+    height: 100vh;
+    background-color: #eaf6f6;
+    justify-content: center;
+    align-items: center;
+}
+
+.box
+{
+    width: 400px;
+    height: 400px;
+    background-color: #E16D6C;
+    border-radius: 8px;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+.content
+{
+    width: 75%;
+    height: 120px;
+    position: relative;
+    text-align: center;
+}
+
+.title
+{
+    background-color: #E16D6C;
+    font-size: 3rem;
+    font-weight: 800;
+    transform: scale(0);
+    animation: title 0.6s ease-in-out 2.6s;
+    animation-fill-mode: both;
+}
+
+.txt
+{
+    font-size: 1.75rem;
+    font-weight: 300;
+}
+
+.top
+{
+    transform: translateX(-20px) scaleX(0);
+    animation: txt-left 0.3s ease-in-out 3.4s;
+    animation-fill-mode: both;
+}
+
+.bottom
+{
+    transform: translateX(20px) scaleX(0);
+    animation: txt-right 0.3s ease-in-out 3.4s;
+    animation-fill-mode: both;
+}
+
+.circle
+{
+    width: 54px;
+    height: 54px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: circle 1.2s linear;
+}
+
+.line, div.right, div.left
+{
+    position: absolute;
+}
+
+.line
+{
+    width: 50%;
+    height: 4px;
+    background-color: #fff;
+    top: 54%;
+    transform: translate(0, -50%) scaleX(0);
+    animation: line 0.6s ease-in-out 1.6s;
+    animation-fill-mode: both;
+}
+
+.l-l
+{
+    transform-origin: 100% 0;
+    left: 0;
+}
+
+.l-r
+{
+    transform-origin: 0 0;
+    right: 0;
+}
+
+.bracket__line 
+{
+    width: 4px;
+    height: 64px;
+    background-color: #fff;
+    top: 54%;
+    transform: translate(0, -50%) scale(1);
+    animation: bracket .4s ease-in-out 2.2s;
+    animation-fill-mode: both;
+    z-index: 1;
+}
+
+.bracket__line.right
+{
+    right: 0;
+}
+
+
+.bracket__top, .bracket__bottom
+{
+    width: 24px;
+    height: 4px;
+    background-color: #fff;
+    animation: bracket .4s ease-in-out 2.2s;
+    animation-fill-mode: both;
+}
+
+.bracket__top
+{
+    top: 32px;
+}
+
+.bracket__bottom
+{
+    top: 96px;
+}
+
+.bracket__top.right
+{
+    right: 0;
+}
+
+.bracket__bottom.right
+{
+    right: 0;
+}
+
+/*========== ANIMATION ==========*/
+@keyframes circle
+{
+    0%, 40%
+    {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    65%
+    {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+    100%
+    {
+        transform: translate(-50%, -50%) scale(0);
+    }
+}
+
+@keyframes line
+{
+    0%
+    {
+        transform: translate(0, -50%) scaleX(0);
+    }
+    100%
+    {
+        transform: translate(0, -50%) scaleX(1);
+    }
+}
+
+@keyframes bracket
+{
+    0%
+    {
+        transform: translate(0, -50%) scaleY(0);
+    }
+    100%
+    {
+        transform: translate(0, -50%) scaleY(1);
+    }
+}
+
+@keyframes title
+{
+    0%
+    {
+        transform: scale(0);
+    }
+    100%
+    {
+        transform: scale(1);
+    }
+} 
+
+@keyframes txt-left
+{
+    0%
+    {
+        transform: translateX(-20px) scaleX(0);
+    }
+    100%
+    {
+        transform: translateX(0) scaleX(1);
+    }
+}
+
+@keyframes txt-right
+{
+    0%
+    {
+        transform: translateX(20px) scaleX(0);
+    }
+    100%
+    {
+        transform: translateX(0) scaleX(1);
+    }
+}
