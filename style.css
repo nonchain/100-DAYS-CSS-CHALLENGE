@@ -3,15 +3,10 @@
 }
 
 .list-group {
-    max-width: 700px;
+    max-width: 500px;
     margin: 10px auto;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.list-group-item
-{
-    flex: 1 1 200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .list-group a{
