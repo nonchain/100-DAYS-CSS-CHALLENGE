@@ -1,0 +1,168 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}    
+
+body
+{
+    font-family: sans-serif;
+}
+
+.flex
+{
+    display: flex;
+}
+
+.frame
+{
+    height: 100vh;
+    background-color: #eaf6f6;
+    justify-content: center;
+    align-items: center;
+}
+
+.box
+{
+    width: 400px;
+    height: 400px;
+    background-color: #28e167;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+input
+{
+    display: none;
+}
+
+.btn__finish, .btn__done
+{
+    color: #fefefe;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 54px;
+    
+}
+.btn__finish
+{
+    width: 180px;
+    height: 54px;
+    border-radius: 32px;
+    border: 2px solid #fefefe;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 3;
+    opacity: 1;
+    transform-origin: center center;
+    z-index: 1;
+}
+
+.btn__done
+{
+	width: 54px;
+	height: 54px;
+	fill: none;
+	stroke: #fefefe;
+	stroke-width: 2px;
+	stroke-linecap: round;
+	stroke-dasharray: 250;
+	stroke-dashoffset: 250;
+	pointer-events: none;
+}
+
+.done
+{
+    color:#fefefe;
+    font-size: 1.5rem;
+    font-weight: 700;
+    opacity: 0;
+}
+
+/*===== CLICK =====*/
+#btn:checked ~ .btn__finish
+{
+    animation: btn-finish 0.8s ease-in-out;
+    animation-fill-mode: both;
+}
+
+#btn:checked ~ .btn__done
+{
+    animation: btn-done 1.2s ease-in-out;
+}
+
+#btn:checked ~ .done
+{
+    animation: done_ 1.2s ease-in-out 1.2s;
+    animation-fill-mode: both;
+}
+
+@keyframes btn-finish
+{
+    0%
+    {
+        transform: translate(-50%, -50%) scaleX(1);
+        color: #fefefe;
+        opacity: 1;
+    }
+    75%
+    {
+        color: transparent;
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translate(-50%, -50%) scaleX(.2);
+        opacity: 0; 
+    }
+}
+
+@keyframes btn-done
+{
+    0% {
+		stroke-dashoffset: 250;
+	}
+	50% {
+		stroke-dashoffset: 0;
+		stroke-dasharray: 250;
+		transform: translate(-50%, -50%) scale(1);
+		opacity: 1;
+	}
+	90%, 100% {
+		stroke-dasharray: 500 500;
+		transform: translate(-50%, -50%) scale(2);
+		opacity: 0;
+	}
+}
+
+@keyframes done_
+{
+    0%
+    {
+        transform: scale(1);
+        color: #fefefe;
+        opacity: 0;
+    }
+    15%
+    {
+        transform: scale(1.25);
+        color: #fefefe;
+        opacity: 1;
+    }
+    20%
+    {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%
+    {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
