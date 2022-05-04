@@ -5,6 +5,13 @@
 .list-group {
     max-width: 300px;
     margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list-group-item
+{
+    flex: 1 1 200px;
 }
 
 .list-group a{
