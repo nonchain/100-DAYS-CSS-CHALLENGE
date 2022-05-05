@@ -1,0 +1,152 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}    
+
+body
+{
+    font-family: sans-serif;
+}
+
+.flex
+{
+    display: flex;
+}
+
+.grid
+{
+    display: grid;
+}
+
+.frame
+{
+    height: 100vh;
+    background-color: #eaf6f6;
+    justify-content: center;
+    align-items: center;
+}
+
+.box
+{
+    width: 400px;
+    height: 400px;
+    background: no-repeat center url('earth.png');
+    background-size: cover;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.filter
+{
+    width: 400px;
+    height: 400px;
+    background-color: #00000066; 
+}
+
+input
+{
+    display: none;
+}
+
+.map__icon
+{
+    color: #edbe03;
+    cursor: pointer;
+    font-size: 5rem;
+    opacity: 1;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(1);
+    animation: map 2s infinite ease-in-out;
+    transition: 1.2s;
+    z-index: 1;
+}
+
+.card__place
+{
+    padding: 0 0 0.25rem;
+    width: 240px;
+    height: 190px;
+    background-color: #fff; 
+    border-radius: 4px;
+    box-shadow: 2px 4px 8px #00000022;
+    cursor: pointer;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%) scale(0);
+    text-align: center;
+    transition: 1.2s 0.5s;
+}
+
+.image
+{
+    width: 100%;
+    height: 65px;
+    object-fit: cover;
+}
+
+.title 
+{
+    color: #1f1f1f;
+}
+
+.address
+{
+    margin: 0 auto;
+    width: 50%;
+    margin-top: -1rem;
+    font-size: 0.8rem;
+}
+
+.btns
+{
+    margin: 0 1.5rem;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.line
+{
+    width: 1px;
+    height: 24px;
+    background-color: #ffd83f
+}
+
+.btn
+{
+    font-size: 0.815rem;
+    color: #2867e1;
+}
+
+/*========== ANIMATION ==========*/
+@keyframes map
+{
+    0%, 100%
+    {
+        transform:  translateY(-5%);
+    }
+    40%, 50%
+    {
+        transform: translateY(5%);
+    }
+}
+
+#map:checked ~ .map__icon
+{
+    transform: scale(0);
+    opacity: 0;
+    z-index: 0;
+}
+
+#map:checked ~ .card__place
+{
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    z-index: 1;
+}
