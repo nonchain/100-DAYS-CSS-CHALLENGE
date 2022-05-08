@@ -1,0 +1,123 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}    
+
+body
+{
+    font-family: sans-serif;
+}
+
+.flex
+{
+    display: flex;
+}
+
+.grid
+{
+    display: grid;
+}
+
+.frame
+{
+    height: 100vh;
+    background-color: #eaf6f6;
+    justify-content: center;
+    align-items: center;
+}
+
+.box
+{
+    width: 400px;
+    height: 400px;
+    background-color: #C7D6E1;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+input
+{
+    display: block;
+    z-index: 5;
+}
+
+.card
+{
+    width: 268px;
+    height: 154px;
+    background-color: #fefefe;
+    border-radius: 4px;
+    grid-template-rows: 3fr 1fr;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    transition: 1.2s;
+}
+
+.index
+{
+    width: 32px;
+    height: 32px;
+    color: #fefefe;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+}
+
+.number
+{
+    font-size: .813rem;
+    z-index: 1;
+}
+
+.index::after
+{
+    width: 68px;
+    height: 68px;
+    background-color: #858585;
+    content: '';
+    position: absolute;
+    right: -34px;
+    top: -34px;
+    transform: rotate(45deg);
+}
+
+.content
+{
+    padding: 0 2rem;
+}
+
+.title
+{
+    margin-top: 1.75rem;
+    margin-bottom: 0.912rem;
+    color: #686868;
+}
+
+.message
+{
+    color: #8f8f8f;
+    font-size: 0.8rem;
+}
+
+.btn
+{
+    width: 100%;
+    background-color: #3CA7FB;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn__txt
+{
+    color: #fefefe;
+    font-size: .813rem;
+    font-weight: 500;
+}
+
