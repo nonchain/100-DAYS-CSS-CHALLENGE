@@ -1,0 +1,152 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  -webkit-box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background: #4C4BA2;
+}
+
+.dots {
+  padding-top: 28px;
+  padding-left: 194px;
+}
+
+.dots .dot {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 5px 0;
+}
+
+.dot-1 {
+  -webkit-animation: dot 1016.94915ms ease-in-out infinite;
+          animation: dot 1016.94915ms ease-in-out infinite;
+}
+
+.dot-2 {
+  -webkit-animation: dot 1034.48276ms ease-in-out infinite;
+          animation: dot 1034.48276ms ease-in-out infinite;
+}
+
+.dot-3 {
+  -webkit-animation: dot 1052.63158ms ease-in-out infinite;
+          animation: dot 1052.63158ms ease-in-out infinite;
+}
+
+.dot-4 {
+  -webkit-animation: dot 1071.42857ms ease-in-out infinite;
+          animation: dot 1071.42857ms ease-in-out infinite;
+}
+
+.dot-5 {
+  -webkit-animation: dot 1090.90909ms ease-in-out infinite;
+          animation: dot 1090.90909ms ease-in-out infinite;
+}
+
+.dot-6 {
+  -webkit-animation: dot 1111.11111ms ease-in-out infinite;
+          animation: dot 1111.11111ms ease-in-out infinite;
+}
+
+.dot-7 {
+  -webkit-animation: dot 1132.07547ms ease-in-out infinite;
+          animation: dot 1132.07547ms ease-in-out infinite;
+}
+
+.dot-8 {
+  -webkit-animation: dot 1153.84615ms ease-in-out infinite;
+          animation: dot 1153.84615ms ease-in-out infinite;
+}
+
+.dot-9 {
+  -webkit-animation: dot 1176.47059ms ease-in-out infinite;
+          animation: dot 1176.47059ms ease-in-out infinite;
+}
+
+.dot-10 {
+  -webkit-animation: dot 1200ms ease-in-out infinite;
+          animation: dot 1200ms ease-in-out infinite;
+}
+
+.dot-11 {
+  -webkit-animation: dot 1224.4898ms ease-in-out infinite;
+          animation: dot 1224.4898ms ease-in-out infinite;
+}
+
+.dot-12 {
+  -webkit-animation: dot 1250ms ease-in-out infinite;
+          animation: dot 1250ms ease-in-out infinite;
+}
+
+.dot-13 {
+  -webkit-animation: dot 1276.59574ms ease-in-out infinite;
+          animation: dot 1276.59574ms ease-in-out infinite;
+}
+
+.dot-14 {
+  -webkit-animation: dot 1304.34783ms ease-in-out infinite;
+          animation: dot 1304.34783ms ease-in-out infinite;
+}
+
+.dot-15 {
+  -webkit-animation: dot 1333.33333ms ease-in-out infinite;
+          animation: dot 1333.33333ms ease-in-out infinite;
+}
+
+.dot-16 {
+  -webkit-animation: dot 1363.63636ms ease-in-out infinite;
+          animation: dot 1363.63636ms ease-in-out infinite;
+}
+
+.dot-17 {
+  -webkit-animation: dot 1395.34884ms ease-in-out infinite;
+          animation: dot 1395.34884ms ease-in-out infinite;
+}
+
+.dot-18 {
+  -webkit-animation: dot 1428.57143ms ease-in-out infinite;
+          animation: dot 1428.57143ms ease-in-out infinite;
+}
+
+.dot-19 {
+  -webkit-animation: dot 1463.41463ms ease-in-out infinite;
+          animation: dot 1463.41463ms ease-in-out infinite;
+}
+
+.dot-20 {
+  -webkit-animation: dot 1500ms ease-in-out infinite;
+          animation: dot 1500ms ease-in-out infinite;
+}
+
+@-webkit-keyframes dot {
+  0%,
+  100% {
+    -webkit-transform: translate3d(50px, 0, 0);
+            transform: translate3d(50px, 0, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(-50px, 0, 0);
+            transform: translate3d(-50px, 0, 0);
+  }
+}
+
+@keyframes dot {
+  0%,
+  100% {
+    -webkit-transform: translate3d(50px, 0, 0);
+            transform: translate3d(50px, 0, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(-50px, 0, 0);
+            transform: translate3d(-50px, 0, 0);
+  }
+}
+/*# sourceMappingURL=style.css.map */

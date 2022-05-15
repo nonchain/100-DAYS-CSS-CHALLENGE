@@ -1,0 +1,121 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   font-family: sans-serif;
+}
+
+.flex {
+   display: flex;
+}
+
+.frame {
+   height: 100vh;
+   background-color: #eaf6f6;
+   justify-content: center;
+   align-items: center;
+}
+
+.box {
+   width: 400px;
+   height: 400px;
+   background-color: #df2222;
+   border-radius: 8px;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   overflow: hidden;
+}
+
+svg {
+   width: 220px;
+   height: 220px;
+   opacity: 0;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%) scale(0.5);
+   fill: transparent;
+}
+
+.wave {
+   stroke: #fff;
+   stroke-width: 4px;
+   stroke-dasharray: 150;
+   stroke-dashoffset: 75;
+}
+
+.bell
+{
+   color: #fff;
+   font-size: 3rem;
+   animation: bell 1.2s infinite ease-in-out;
+}
+
+svg:nth-child(1)
+{
+   animation: wave 1.2s infinite linear 0.9s;
+}
+
+svg:nth-child(2)
+{
+   animation: wave 1.2s infinite linear 1.5s;
+}
+
+svg:nth-child(3)
+{
+   animation: wave 1.2s infinite linear 3s;
+}
+
+/*========== ANIMATION ==========*/
+@keyframes wave
+{
+   0%
+   {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.5);
+   }
+   40%
+   {
+      opacity: 1;
+   }
+   80%,100%
+   {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(1);
+   }
+}
+
+@keyframes bell
+{
+	0%, 50%, 100% {
+		transform: rotate(0);
+	}
+	5%, 10%, 15%, 20%, 25%, 30%, 35%, 40% {
+		transform: rotate(6deg);
+	} 
+	45% {
+		transform: rotate(4deg);
+	} 
+	7.5%, 12.5%, 17.5%, 22.5%, 27.5%, 32.5%, 37.5%, 42.5% {
+		transform: rotate(-6deg);
+	}
+	47.5% {
+		transform: rotate(-2deg);
+	}
+
+   55%, 60%, 65%, 70%, 75%, 80%, 85%, 90% {
+		transform: rotate(6deg);
+	} 
+	95% {
+		transform: rotate(4deg);
+	} 
+	57.5%, 62.5%, 67.5%, 72.5%, 77.5%, 82.5%, 87.5%, 92.5% {
+		transform: rotate(-6deg);
+	}
+	97.5% {
+		transform: rotate(-2deg);
+	}
+}
